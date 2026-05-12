@@ -7,6 +7,8 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const Navbar = () => {
   return (
@@ -16,24 +18,24 @@ const Navbar = () => {
 
       {/* Center: Nav Links with logo in middle */}
       <div className="w-4/6 hidden sm:flex items-center justify-center space-x-6 bg-blue-200 rounded-full px-8 py-2 shadow-inner">
-        <a href="/" className="text-2xl text-gray-600 hover:text-black font-medium">
+        <Link href="/" className="text-2xl text-gray-600 hover:text-black font-medium">
           Home
-        </a>
-        <a href="/about" className="text-2xl text-gray-600 hover:text-black font-medium">
+        </Link>
+        <Link href="/about" className="text-2xl text-gray-600 hover:text-black font-medium">
           About
-        </a>
+        </Link>
 
         {/* Centered Logo */}
-        <a href="/" className="flex items-center justify-center px-2">
-          <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
-        </a>
+        <Link href="/" className="flex items-center justify-center px-2">
+          <Image src="/logo.png" alt="Logo" className="h-10 w-auto" />
+        </Link>
 
-        <a href="/services" className="text-2xl text-gray-600 hover:text-black font-medium">
+        <Link href="/services" className="text-2xl text-gray-600 hover:text-black font-medium">
           Services
-        </a>
-        <a href="/contact" className="text-2xl text-gray-600 hover:text-black font-medium">
+        </Link>
+        <Link href="/contact" className="text-2xl text-gray-600 hover:text-black font-medium">
           Contact
-        </a>
+        </Link>
       </div>
 
       {/* Right: Auth Buttons */}
